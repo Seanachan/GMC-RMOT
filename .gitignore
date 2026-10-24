@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# data, weights, and generated outputs stay out of git
+weights/
+cache/
+scores/
+runs/
+*.pth
+*.npz
+.DS_Store

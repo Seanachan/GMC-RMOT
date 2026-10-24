@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmc-rmot"
+version = "1.0.0"
+description = "Global motion compensation module for referring multi-object tracking in moving-camera videos"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Hsin-Chen Pai" }]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "torch",
+    "sentence-transformers",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2610.04185"
+
+[tool.setuptools]
+packages = ["gmc"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
